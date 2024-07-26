@@ -1,10 +1,10 @@
 import '@testing-library/jest-dom';
-import { Dashboard } from 'features/Dashboard/Dashboard';
 import { setupServer } from 'msw/node';
 import React, { createElement } from 'react';
-import { cleanup, renderWithProviders, screen } from 'test-utils';
-import { mockUserEndpoints } from 'test-utils/mock';
-import { mockSiteEndpoints } from 'test-utils/mock/mockSiteEndpoints';
+import { Dashboard } from 'src/features/Dashboard/Dashboard';
+import { cleanup, renderWithProviders, screen } from 'src/test-utils';
+import { mockUserEndpoints } from 'src/test-utils/mock';
+import { mockSiteEndpoints } from 'src/test-utils/mock/mockSiteEndpoints';
 import { afterAll, afterEach, beforeAll, describe, expect, test, vi } from 'vitest';
 
 const USERNAME = 'testuser1';

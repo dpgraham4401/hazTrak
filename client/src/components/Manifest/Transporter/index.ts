@@ -1,5 +1,5 @@
 import { TransporterTable } from './TransporterTable';
-import { Transporter } from 'components/Manifest';
+import { Transporter } from 'src/components/Manifest';
 
 export { TransporterTable };
 export type { Transporter };

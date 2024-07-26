@@ -1,6 +1,6 @@
 import React from 'react';
 import { ListGroup } from 'react-bootstrap';
-import { RcraAddress } from 'components/RcraSite';
+import { RcraAddress } from 'src/components/RcraSite';
 
 interface AddressListGroupProps {
   title: string;

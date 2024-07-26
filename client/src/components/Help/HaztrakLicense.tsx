@@ -1,6 +1,6 @@
 import { Card } from 'react-bootstrap';
 import React from 'react';
-import { HtCard } from 'components/UI';
+import { HtCard } from 'src/components/UI';
 
 export function HaztrakLicense() {
   return (

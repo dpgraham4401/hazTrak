@@ -1,6 +1,6 @@
-import { Manifest, ManifestStatus, SubmissionType } from 'components/Manifest/manifestSchema';
-import { HtForm } from 'components/UI';
-import { useManifestStatus } from 'hooks/manifest';
+import { Manifest, ManifestStatus, SubmissionType } from 'src/components/Manifest/manifestSchema';
+import { HtForm } from 'src/components/UI';
+import { useManifestStatus } from 'src/hooks/manifest';
 import React, { useState } from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
 import Select, { SingleValue } from 'react-select';

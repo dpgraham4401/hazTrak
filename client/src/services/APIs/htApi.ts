@@ -1,10 +1,10 @@
 /**htApi.ts - service for making requests to the Haztrak API*/
 import axios, { InternalAxiosRequestConfig } from 'axios';
-import { rootStore } from 'store';
+import { rootStore } from 'src/store';
 
 /** An Axios instance with an interceptor to automatically apply authentication headers*/
 export const htApi = axios.create({
-  baseURL: `${import.meta.env.VITE_HT_API_URL}/api`,
+  baseURL: `${process.env.NEXT_PUBLIC_HT_API_URL}/api`,
   headers: {
     Accept: 'application/json',
     'Content-Type': 'application/json',

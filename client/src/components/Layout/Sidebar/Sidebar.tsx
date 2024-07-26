@@ -1,12 +1,11 @@
-import logo from '/assets/img/haztrak-logos/haztrak-logo-zip-file/png/logo-black-crop.png';
-import { NavSection } from 'components/Layout/Nav/NavSection';
-import { NavItem } from 'components/Layout/Nav/NavItem';
-import { NavContext, NavContextProps } from 'components/Layout/Root';
 import React, { ReactElement, useContext } from 'react';
 import { Nav, Offcanvas } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { RootState } from 'store';
+import { NavItem } from 'src/components/Layout/Nav/NavItem';
+import { NavSection } from 'src/components/Layout/Nav/NavSection';
+import { NavContext, NavContextProps } from 'src/components/Layout/Root';
+import { RootState } from 'src/store';
 import { routes } from './SidebarRoutes';
 
 /** Vertical sidebar for navigation that disappears when the viewport is small*/
@@ -20,12 +19,12 @@ export function Sidebar(): ReactElement | null {
       <Offcanvas.Header closeButton>
         <Offcanvas.Title>
           <Link to="/" className="navbar-brand ps-1 mb-0">
-            <img
-              src={logo}
-              alt="haztrak logo, hazardous waste tracking made easy."
-              width={200}
-              height={'auto'}
-            />
+            {/*<img*/}
+            {/*  src={logo}*/}
+            {/*  alt="haztrak logo, hazardous waste tracking made easy."*/}
+            {/*  width={200}*/}
+            {/*  height={'auto'}*/}
+            {/*/>*/}
           </Link>
         </Offcanvas.Title>
       </Offcanvas.Header>

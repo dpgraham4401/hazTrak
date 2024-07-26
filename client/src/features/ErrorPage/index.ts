@@ -1,1 +1,1 @@
-export { ErrorPage as Component } from 'features/ErrorPage/ErrorPage';
+export { ErrorPage as Component } from 'src/features/ErrorPage/ErrorPage';

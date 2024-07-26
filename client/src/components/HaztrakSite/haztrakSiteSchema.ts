@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { rcraSite } from 'components/RcraSite';
+import { rcraSite } from 'src/components/RcraSite';
 
 const haztrakSiteSchema = z.object({
   name: z.string(),

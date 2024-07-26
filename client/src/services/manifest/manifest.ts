@@ -1,6 +1,6 @@
-import { Manifest } from 'components/Manifest';
-import { ManifestStatus, RcraSiteType, SiteType } from 'components/Manifest/manifestSchema';
-import { ProfileSlice } from 'store';
+import { Manifest } from 'src/components/Manifest';
+import { ManifestStatus, RcraSiteType, SiteType } from 'src/components/Manifest/manifestSchema';
+import { ProfileSlice } from 'src/store';
 
 export const manifest = {
   /** Returns EPA ID of the next site that can sign on a manifest or undefined if not applicable. */

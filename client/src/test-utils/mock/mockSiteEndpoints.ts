@@ -1,7 +1,7 @@
 import { http, HttpResponse } from 'msw';
 import { createMockHandler, createMockSite } from '../fixtures';
 
-export const API_BASE_URL = import.meta.env.VITE_HT_API_URL;
+export const API_BASE_URL = process.env.NEXT_PUBLIC_HT_API_URL;
 const mockEpaId = createMockHandler().epaSiteId;
 const mockSites = [createMockSite(), createMockSite()];
 

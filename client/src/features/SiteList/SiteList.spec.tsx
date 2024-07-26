@@ -1,9 +1,9 @@
 import { http, HttpResponse } from 'msw';
 import { setupServer } from 'msw/node';
 import React from 'react';
-import { renderWithProviders, screen } from 'test-utils';
-import { createMockHandler, createMockSite } from 'test-utils/fixtures/mockHandler';
-import { mockSiteEndpoints, mockUserEndpoints } from 'test-utils/mock';
+import { renderWithProviders, screen } from 'src/test-utils';
+import { createMockHandler, createMockSite } from 'src/test-utils/fixtures/mockHandler';
+import { mockSiteEndpoints, mockUserEndpoints } from 'src/test-utils/mock';
 import { afterAll, beforeAll, describe, expect, test } from 'vitest';
 import { SiteList } from './SiteList';
 
@@ -25,7 +25,7 @@ describe('SiteList component', () => {
   });
   test('displays all sites a user has access to', async () => {
     server.use(
-      http.get(`${import.meta.env.VITE_HT_API_URL}/api/site`, (info) => {
+      http.get(`${process.env.NEXT_PUBLIC_HT_API_URL}/api/site`, (info) => {
         return HttpResponse.json(mockSites, { status: 200 });
       })
     );

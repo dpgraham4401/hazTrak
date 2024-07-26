@@ -1,8 +1,7 @@
 import React from 'react';
-import { Card, Col, Container, Row } from 'react-bootstrap';
-import { useTitle } from 'hooks';
-import { HtSpinner } from 'components/UI';
-import { HaztrakLicense, SectionTitle } from 'components/Help';
+import { Col, Container, Row } from 'react-bootstrap';
+import { HaztrakLicense, SectionTitle } from 'src/components/Help';
+import { useTitle } from 'src/hooks';
 
 /**
  * Static page that talks about Haztrak's licensing, maybe versioning in future
@@ -47,7 +46,7 @@ export function About() {
       <p className="pt-4">
         We welcome contribution to the source code, which you can find, along with the contributor's
         guidelines in our git repository on{' '}
-        <a href={`${import.meta.env.VITE_GITHUB_URL}`}>GitHub</a>
+        <a href={`${process.env.NEXT_PUBLIC_GITHUB_URL}`}>GitHub</a>
       </p>
       <p />
     </Container>

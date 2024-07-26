@@ -1,3 +1,3 @@
-import { RcraProfile } from 'components/RcraProfile/RcraProfile';
+import { RcraProfile } from 'src/components/RcraProfile/RcraProfile';
 
 export { RcraProfile };

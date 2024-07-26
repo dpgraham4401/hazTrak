@@ -1,9 +1,9 @@
 import { faFileSignature, faPen } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Handler, RcraSiteType } from 'components/Manifest/manifestSchema';
-import { Transporter } from 'components/Manifest/Transporter';
-import { HtForm } from 'components/UI';
-import { useProgressTracker } from 'hooks';
+import { Handler, RcraSiteType } from 'src/components/Manifest/manifestSchema';
+import { Transporter } from 'src/components/Manifest/Transporter';
+import { HtForm } from 'src/components/UI';
+import { useProgressTracker } from 'src/hooks';
 import React, { useEffect, useState } from 'react';
 import { Button, Col, Container, Form, ListGroup, Row, Stack } from 'react-bootstrap';
 import { SubmitHandler, useForm } from 'react-hook-form';
@@ -15,7 +15,7 @@ import {
   useAppDispatch,
   useAppSelector,
   useSignEManifestMutation,
-} from 'store';
+} from 'src/store';
 import { z } from 'zod';
 
 const siteType = z.enum(['Transporter', 'Generator', 'Tsdf', 'Broker']);

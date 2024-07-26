@@ -1,13 +1,13 @@
 import '@testing-library/jest-dom';
-import { useAppSelector } from 'store';
+import { useAppSelector } from 'src/store';
 import reducer, {
   ManifestSlice,
   selectManifestReadOnly,
   setHandlerSearchConfigs,
   setManifestReadOnly,
   setManifestStatus,
-} from 'store/manifestSlice/manifest.slice';
-import { renderWithProviders, screen } from 'test-utils';
+} from 'src/store/manifestSlice/manifest.slice';
+import { renderWithProviders, screen } from 'src/test-utils';
 import { afterEach, describe, expect, test } from 'vitest';
 
 afterEach(() => {});

@@ -1,12 +1,12 @@
 import '@testing-library/jest-dom';
+import userEvent from '@testing-library/user-event';
 import { http, HttpResponse } from 'msw';
 import { setupServer } from 'msw/node';
 import React, { useState } from 'react';
-import { renderWithProviders, screen, waitFor, cleanup } from 'test-utils';
+import { useProgressTracker } from 'src/hooks/useProgressTracker/useProgressTracker';
+import { addTask, useAppDispatch } from 'src/store';
+import { cleanup, renderWithProviders, screen, waitFor } from 'src/test-utils';
 import { afterAll, afterEach, beforeAll, describe, expect, test } from 'vitest';
-import { useProgressTracker } from 'hooks/useProgressTracker/useProgressTracker';
-import userEvent from '@testing-library/user-event';
-import { addTask, useAppDispatch } from 'store';
 
 function TestComponent({ taskUUID }: { taskUUID: string }) {
   const dispatch = useAppDispatch();
@@ -42,7 +42,7 @@ const MOCK_TASK_ID = '10043946-9fcb-4ca2-82a4-f1ba2fa9f928';
 const MOCK_BAD_TASK_ID = 'ac9e57dd-07b6-4568-bb42-99a2d6518f97';
 
 /** mock Rest API*/
-const API_BASE_URL = import.meta.env.VITE_HT_API_URL;
+const API_BASE_URL = process.env.NEXT_PUBLIC_HT_API_URL;
 const handlers = [
   http.get(`${API_BASE_URL}/api/task/${MOCK_TASK_ID}`, function* f() {
     let requestCount = 0;

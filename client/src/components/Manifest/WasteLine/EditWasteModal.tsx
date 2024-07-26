@@ -1,7 +1,7 @@
-import { ManifestContext, ManifestContextType } from 'components/Manifest/ManifestForm';
-import { Manifest } from 'components/Manifest/manifestSchema';
-import { WasteLine } from 'components/Manifest/WasteLine/wasteLineSchema';
-import { HtModal } from 'components/UI';
+import { ManifestContext, ManifestContextType } from 'src/components/Manifest/ManifestForm';
+import { Manifest } from 'src/components/Manifest/manifestSchema';
+import { WasteLine } from 'src/components/Manifest/WasteLine/wasteLineSchema';
+import { HtModal } from 'src/components/UI';
 import React, { useContext } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { UseFieldArrayReturn } from 'react-hook-form';

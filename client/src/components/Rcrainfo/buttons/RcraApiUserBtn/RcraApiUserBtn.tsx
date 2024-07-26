@@ -1,5 +1,5 @@
 import { Button, ButtonProps } from 'react-bootstrap';
-import { useGetProfileQuery } from 'store';
+import { useGetProfileQuery } from 'src/store';
 
 interface HtApiUserBtnProps extends ButtonProps {}
 

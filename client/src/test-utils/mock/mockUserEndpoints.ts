@@ -1,14 +1,14 @@
 import { http, HttpResponse } from 'msw';
-import { HaztrakUser } from 'store/authSlice/auth.slice';
-import { LoginResponse } from 'store/userSlice/user.slice';
-import { createMockHaztrakUser } from 'test-utils/fixtures';
+import { HaztrakUser } from 'src/store/authSlice/auth.slice';
+import { LoginResponse } from 'src/store/userSlice/user.slice';
+import { createMockHaztrakUser } from 'src/test-utils/fixtures';
 import {
   createMockProfileResponse,
   createMockRcrainfoProfileResponse,
-} from 'test-utils/fixtures/mockUser';
+} from 'src/test-utils/fixtures/mockUser';
 
 /** mock Rest API*/
-const API_BASE_URL = import.meta.env.VITE_HT_API_URL;
+const API_BASE_URL = process.env.NEXT_PUBLIC_HT_API_URL;
 export const mockUserEndpoints = [
   /** GET User */
   http.get(`${API_BASE_URL}/api/user`, () => {

@@ -1,12 +1,12 @@
-import { manifest } from 'services/manifest/manifest';
+import { manifest } from 'src/services/manifest/manifest';
+import { ProfileSlice } from 'src/store';
 import {
   createMockManifest,
   createMockMTNHandler,
   createMockSite,
   createMockTransporter,
-} from 'test-utils/fixtures';
+} from 'src/test-utils/fixtures';
 import { describe, expect, test } from 'vitest';
-import { ProfileSlice } from 'store';
 
 describe('manifest.getNextSigner', () => {
   test('returns the the generator if scheduled and no generator signature present', () => {

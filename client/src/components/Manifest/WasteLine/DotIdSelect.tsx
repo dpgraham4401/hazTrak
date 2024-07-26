@@ -1,7 +1,7 @@
-import { WasteLine } from 'components/Manifest/WasteLine/wasteLineSchema';
+import { WasteLine } from 'src/components/Manifest/WasteLine/wasteLineSchema';
 import React, { useEffect, useState } from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
-import { useLazyGetDotIdNumbersQuery } from 'store';
+import { useLazyGetDotIdNumbersQuery } from 'src/store';
 import Select from 'react-select';
 
 interface DotIdOption {

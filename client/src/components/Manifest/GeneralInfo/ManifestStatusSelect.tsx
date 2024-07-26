@@ -1,11 +1,11 @@
-import { Manifest, ManifestStatus } from 'components/Manifest/manifestSchema';
-import { HtForm, InfoIconTooltip } from 'components/UI';
-import { useManifestStatus } from 'hooks/manifest';
 import React from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
 import Select, { SingleValue } from 'react-select';
-import { manifest } from 'services';
-import { useGetProfileQuery } from 'store';
+import { Manifest, ManifestStatus } from 'src/components/Manifest/manifestSchema';
+import { HtForm, InfoIconTooltip } from 'src/components/UI';
+import { useManifestStatus } from 'src/hooks/manifest';
+import { manifest } from 'src/services';
+import { useGetProfileQuery } from 'src/store';
 
 interface StatusOption {
   value: ManifestStatus;

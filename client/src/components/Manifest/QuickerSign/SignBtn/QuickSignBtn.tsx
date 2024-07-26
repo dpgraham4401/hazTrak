@@ -1,12 +1,12 @@
 import { faFeather } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { createSelector } from '@reduxjs/toolkit';
-import { ManifestContext } from 'components/Manifest/ManifestForm';
-import { Handler, RcraSiteType } from 'components/Manifest/manifestSchema';
-import { RcraApiUserBtn } from 'components/Rcrainfo';
+import { ManifestContext } from 'src/components/Manifest/ManifestForm';
+import { Handler, RcraSiteType } from 'src/components/Manifest/manifestSchema';
+import { RcraApiUserBtn } from 'src/components/Rcrainfo';
 import React, { useContext, useMemo } from 'react';
 import { ButtonProps } from 'react-bootstrap';
-import { ProfileSlice, useGetProfileQuery } from 'store';
+import { ProfileSlice, useGetProfileQuery } from 'src/store';
 
 interface QuickSignBtnProps extends ButtonProps {
   siteType?: RcraSiteType;

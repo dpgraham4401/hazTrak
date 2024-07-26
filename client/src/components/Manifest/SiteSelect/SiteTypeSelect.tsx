@@ -1,5 +1,5 @@
-import { RcraSiteType } from 'components/Manifest/manifestSchema';
-import { HtForm } from 'components/UI';
+import { RcraSiteType } from 'src/components/Manifest/manifestSchema';
+import { HtForm } from 'src/components/UI';
 import React from 'react';
 import { Form } from 'react-bootstrap';
 import { Control, Controller } from 'react-hook-form';

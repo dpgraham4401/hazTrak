@@ -1,11 +1,11 @@
-import { ManifestEditBtn } from 'components/Manifest/Actions/ManifestEditBtn';
-import { ManifestSaveBtn } from 'components/Manifest/Actions/ManifestSaveBtn';
-import { ManifestContext } from 'components/Manifest/ManifestForm';
-import { QuickSignBtn } from 'components/Manifest/QuickerSign';
-import { FloatingActionBtn } from 'components/UI';
-import { useReadOnly } from 'hooks/manifest';
 import React, { ReactElement, useContext } from 'react';
-import { manifest } from 'services';
+import { ManifestEditBtn } from 'src/components/Manifest/Actions/ManifestEditBtn';
+import { ManifestSaveBtn } from 'src/components/Manifest/Actions/ManifestSaveBtn';
+import { ManifestContext } from 'src/components/Manifest/ManifestForm';
+import { QuickSignBtn } from 'src/components/Manifest/QuickerSign';
+import { FloatingActionBtn } from 'src/components/UI';
+import { useReadOnly } from 'src/hooks/manifest';
+import { manifest } from 'src/services';
 
 interface ManifestActionBtnsProps {
   onSignClick: () => void;

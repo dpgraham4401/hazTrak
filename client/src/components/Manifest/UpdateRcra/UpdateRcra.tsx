@@ -1,7 +1,7 @@
-import { HtSpinner } from 'components/UI';
+import { HtSpinner } from 'src/components/UI';
 import React, { useEffect } from 'react';
 import { Navigate } from 'react-router-dom';
-import { addAlert, useAppDispatch, useGetTaskStatusQuery } from 'store';
+import { addAlert, useAppDispatch, useGetTaskStatusQuery } from 'src/store';
 
 interface UpdateRcraProps {
   taskId: string;

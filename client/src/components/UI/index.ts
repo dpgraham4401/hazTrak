@@ -1,8 +1,8 @@
-export { HtButton } from 'components/UI/HtButton';
-export { HtForm } from 'components/UI/HtForm';
-export { HtPageBtns } from 'components/UI/HtPaginate/HtPageBtns';
-export { HtPageControls } from 'components/UI/HtPaginate/HtPageControls';
-export { HtPaginate } from 'components/UI/HtPaginate/HtPaginate';
+export { HtButton } from 'src/components/UI/HtButton';
+export { HtForm } from 'src/components/UI/HtForm';
+export { HtPageBtns } from 'src/components/UI/HtPaginate/HtPageBtns';
+export { HtPageControls } from 'src/components/UI/HtPaginate/HtPageControls';
+export { HtPaginate } from 'src/components/UI/HtPaginate/HtPaginate';
 export { HtCard } from './HtCard/HtCard';
 export { HtModal } from './HtModal/HtModal';
 export { HtSpinner } from './HtSpinner';

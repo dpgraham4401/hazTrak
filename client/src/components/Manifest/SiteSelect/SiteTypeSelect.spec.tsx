@@ -1,9 +1,9 @@
 import { screen } from '@testing-library/react';
-import { RcraSiteType } from 'components/Manifest/manifestSchema';
-import { SiteTypeSelect } from 'components/Manifest/SiteSelect/SiteTypeSelect';
+import { RcraSiteType } from 'src/components/Manifest/manifestSchema';
+import { SiteTypeSelect } from 'src/components/Manifest/SiteSelect/SiteTypeSelect';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { renderWithProviders } from 'test-utils';
+import { renderWithProviders } from 'src/test-utils';
 import { describe, expect, test } from 'vitest';
 
 function TestComponent({ siteType }: { siteType?: RcraSiteType }) {

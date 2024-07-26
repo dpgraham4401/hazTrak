@@ -6,8 +6,8 @@ import {
   setCredentials,
   useAppDispatch,
   useAppSelector,
-} from 'store';
-import { renderWithProviders, screen } from 'test-utils';
+} from 'src/store';
+import { renderWithProviders, screen } from 'src/test-utils';
 import { afterEach, describe, expect, test, vi } from 'vitest';
 
 const getItemSpy = vi.spyOn(Storage.prototype, 'getItem');

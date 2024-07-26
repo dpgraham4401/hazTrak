@@ -1,2 +1,2 @@
-export { HaztrakLicense } from 'components/Help/HaztrakLicense';
-export { SectionTitle } from 'components/Help/SectionTitle';
+export { HaztrakLicense } from 'src/components/Help/HaztrakLicense';
+export { SectionTitle } from 'src/components/Help/SectionTitle';

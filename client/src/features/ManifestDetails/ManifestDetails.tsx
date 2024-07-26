@@ -1,10 +1,10 @@
-import { ManifestForm } from 'components/Manifest';
-import { HtSpinner } from 'components/UI';
-import { useTitle } from 'hooks';
-import { useReadOnly } from 'hooks/manifest';
+import { ManifestForm } from 'src/components/Manifest';
+import { HtSpinner } from 'src/components/UI';
+import { useTitle } from 'src/hooks';
+import { useReadOnly } from 'src/hooks/manifest';
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { useGetManifestQuery } from 'store';
+import { useGetManifestQuery } from 'src/store';
 
 export function ManifestDetails() {
   const { mtn, action, siteId } = useParams();

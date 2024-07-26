@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
-import { Manifest } from 'components/Manifest';
+import { Manifest } from 'src/components/Manifest';
 import {
   useCreateManifestMutation,
   useSaveEManifestMutation,
   useUpdateManifestMutation,
-} from 'store';
+} from 'src/store';
 
 /**
  * encapsulates the logic for making requests to the back end to save a manifest (create, update, or save to e-Manifest)

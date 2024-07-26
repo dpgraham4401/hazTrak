@@ -1,8 +1,8 @@
 import '@testing-library/jest-dom';
-import { RcraSiteDetails } from 'components/RcraSite';
+import { RcraSiteDetails } from 'src/components/RcraSite';
 import React from 'react';
-import { cleanup, renderWithProviders, screen } from 'test-utils';
-import { createMockMTNHandler } from 'test-utils/fixtures';
+import { cleanup, renderWithProviders, screen } from 'src/test-utils';
+import { createMockMTNHandler } from 'src/test-utils/fixtures';
 import { afterEach, describe, expect, test } from 'vitest';
 
 afterEach(() => {

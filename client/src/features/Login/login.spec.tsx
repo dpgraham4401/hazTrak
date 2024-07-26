@@ -1,8 +1,8 @@
 import '@testing-library/jest-dom';
 import React from 'react';
-import { renderWithProviders, screen } from 'test-utils';
-import { Login } from 'features/Login';
-import { describe, test, expect } from 'vitest';
+import { Login } from 'src/features/Login';
+import { renderWithProviders, screen } from 'src/test-utils';
+import { describe, expect, test } from 'vitest';
 
 describe('Login component', () => {
   test('renders', () => {

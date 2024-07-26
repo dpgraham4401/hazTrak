@@ -1,13 +1,13 @@
 import { ErrorMessage } from '@hookform/error-message';
-import { ManifestContext, ManifestContextType } from 'components/Manifest/ManifestForm';
-import { StateWasteCodeSelect } from 'components/Manifest/WasteLine/HazardousWasteForm/StateWasteCodeSelect';
-import { Code, WasteLine } from 'components/Manifest/WasteLine/wasteLineSchema';
-import { HtForm } from 'components/UI';
+import { ManifestContext, ManifestContextType } from 'src/components/Manifest/ManifestForm';
+import { StateWasteCodeSelect } from 'src/components/Manifest/WasteLine/HazardousWasteForm/StateWasteCodeSelect';
+import { Code, WasteLine } from 'src/components/Manifest/WasteLine/wasteLineSchema';
+import { HtForm } from 'src/components/UI';
 import React, { useContext } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { Controller, useFormContext } from 'react-hook-form';
 import Select, { components, GroupBase, MultiValueProps, StylesConfig } from 'react-select';
-import { useGetFedWasteCodesQuery } from 'store';
+import { useGetFedWasteCodesQuery } from 'src/store';
 
 interface HazardousWasteFormProps {
   epaWaste: boolean;

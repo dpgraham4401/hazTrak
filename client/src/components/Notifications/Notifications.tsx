@@ -1,5 +1,5 @@
-import { ProgressTracker } from 'components/Notifications/ProgressTracker';
-import { LongRunningTask, selectAllTasks, useAppSelector } from 'store';
+import { ProgressTracker } from 'src/components/Notifications/ProgressTracker';
+import { LongRunningTask, selectAllTasks, useAppSelector } from 'src/store';
 
 export function Notifications() {
   const tasks: LongRunningTask[] = useAppSelector(selectAllTasks);

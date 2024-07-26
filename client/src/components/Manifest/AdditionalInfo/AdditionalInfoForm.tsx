@@ -1,9 +1,9 @@
 import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Manifest } from 'components/Manifest';
-import { WasteLine } from 'components/Manifest/WasteLine';
-import { HtForm } from 'components/UI';
-import { useReadOnly } from 'hooks/manifest';
+import { Manifest } from 'src/components/Manifest';
+import { WasteLine } from 'src/components/Manifest/WasteLine';
+import { HtForm } from 'src/components/UI';
+import { useReadOnly } from 'src/hooks/manifest';
 import React from 'react';
 import { Button, Col, Form, Row } from 'react-bootstrap';
 import { useFieldArray, useFormContext } from 'react-hook-form';

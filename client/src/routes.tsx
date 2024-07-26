@@ -1,13 +1,13 @@
-import { ErrorPage } from 'features/ErrorPage/ErrorPage';
-import { Login } from 'features/Login';
 import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
+import { ErrorPage } from 'src/features/ErrorPage/ErrorPage';
+import { Login } from 'src/features/Login';
 
-const Dashboard = React.lazy(() => import('features/Dashboard'));
-const Profile = React.lazy(() => import('features/Profile'));
-const SiteList = React.lazy(() => import('features/SiteList'));
-const SiteDetails = React.lazy(() => import('features/SiteDetails'));
-const Help = React.lazy(() => import('features/About'));
+const Dashboard = React.lazy(() => import('src/features/Dashboard'));
+const Profile = React.lazy(() => import('src/features/Profile'));
+const SiteList = React.lazy(() => import('src/features/SiteList'));
+const SiteDetails = React.lazy(() => import('src/features/SiteDetails'));
+const Help = React.lazy(() => import('src/features/About'));
 
 export const router = createBrowserRouter([
   {

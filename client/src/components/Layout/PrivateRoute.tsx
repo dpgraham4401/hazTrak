@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import { Navigate } from 'react-router-dom';
-import { selectAuthenticated, useAppSelector } from 'store';
+import { selectAuthenticated, useAppSelector } from 'src/store';
 
 interface Props {
   children: any;

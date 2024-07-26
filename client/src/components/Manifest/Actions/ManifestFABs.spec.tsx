@@ -1,10 +1,10 @@
 import '@testing-library/jest-dom';
-import { ManifestFABs } from 'components/Manifest/Actions/ManifestFABs';
-import { ManifestContext } from 'components/Manifest/ManifestForm';
-import { ManifestStatus } from 'components/Manifest/manifestSchema';
-import { useReadOnly } from 'hooks/manifest';
+import { ManifestFABs } from 'src/components/Manifest/Actions/ManifestFABs';
+import { ManifestContext } from 'src/components/Manifest/ManifestForm';
+import { ManifestStatus } from 'src/components/Manifest/manifestSchema';
+import { useReadOnly } from 'src/hooks/manifest';
 import React from 'react';
-import { cleanup, renderWithProviders, screen } from 'test-utils';
+import { cleanup, renderWithProviders, screen } from 'src/test-utils';
 import { afterEach, describe, expect, test } from 'vitest';
 
 const TestComponent = ({

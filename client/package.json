@@ -4,8 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "vite",
-    "build": "tsc && vite build",
+    "start": "next start",
+    "dev": "next dev",
+    "build": "next build",
     "serve": "serve dist",
     "test": "vitest --run",
     "test:watch": "vitest",

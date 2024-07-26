@@ -1,7 +1,7 @@
-import { useProgressTracker } from 'hooks';
+import { useProgressTracker } from 'src/hooks';
 import { useEffect } from 'react';
 import { toast } from 'react-toastify';
-import { LongRunningTask } from 'store';
+import { LongRunningTask } from 'src/store';
 
 export interface NotificationProps {
   task: LongRunningTask;

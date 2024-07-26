@@ -1,12 +1,12 @@
 import { BaseQueryFn, createApi } from '@reduxjs/toolkit/query/react';
 import { AxiosError, AxiosRequestConfig, AxiosResponse } from 'axios';
-import { HaztrakSite } from 'components/HaztrakSite';
-import { Manifest } from 'components/Manifest';
-import { QuickerSignature } from 'components/Manifest/QuickerSign';
-import { Code } from 'components/Manifest/WasteLine/wasteLineSchema';
-import { MtnDetails } from 'components/Mtn';
-import { RcraSite } from 'components/RcraSite';
-import { htApi } from 'services';
+import { HaztrakSite } from 'src/components/HaztrakSite';
+import { Manifest } from 'src/components/Manifest';
+import { QuickerSignature } from 'src/components/Manifest/QuickerSign';
+import { Code } from 'src/components/Manifest/WasteLine/wasteLineSchema';
+import { MtnDetails } from 'src/components/Mtn';
+import { RcraSite } from 'src/components/RcraSite';
+import { htApi } from 'src/services';
 
 export interface TaskResponse {
   taskId: string;
@@ -75,7 +75,7 @@ export const haztrakApi = createApi({
   tagTypes: ['user', 'auth', 'profile', 'rcrainfoProfile', 'site', 'code', 'manifest'],
   reducerPath: 'haztrakApi',
   baseQuery: htApiBaseQuery({
-    baseUrl: `${import.meta.env.VITE_HT_API_URL}/api/`,
+    baseUrl: `${process.env.NEXT_PUBLIC_HT_API_URL}/api/`,
   }),
   endpoints: (build) => ({
     // Note: build.query<ReturnType, ArgType>
