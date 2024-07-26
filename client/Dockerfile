@@ -1,30 +1,36 @@
-# Mutlistage dockerize dpgraham.com react.js front end
-# Build stage
-FROM node:20-alpine as builder
-LABEL maintainer="graham.david@epa.gov"
+
+FROM node:20-alpine as base
+RUN apk add --no-cache g++ make py3-pip libc6-compat
+WORKDIR /app
+COPY package*.json ./
+EXPOSE 3000
+
+FROM base as builder
 WORKDIR /app
 COPY . .
-RUN npm ci --silent
 RUN npm run build
 
 
-# test
-FROM builder as test
+FROM base as production
 WORKDIR /app
-CMD ["npm", "run", "test"]
 
-# local development
-FROM builder as dev
-WORKDIR /app
-EXPOSE 3000
-CMD ["npm", "dev"]
+ENV NODE_ENV=production
+RUN npm ci
 
-# Production
-FROM nginx:1.24.0-alpine as production
-WORKDIR /app
-ENV NODE_ENV production
-# copy build from builder stage
-COPY --from=builder /app/dist /usr/share/nginx/html
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-EXPOSE 3000
-CMD ["nginx", "-g", "daemon off;"]
+RUN addgroup -g 1001 -S nodejs
+RUN adduser -S nextjs -u 1001
+USER nextjs
+
+
+COPY --from=builder --chown=nextjs:nodejs /app/.next ./.next
+COPY --from=builder /app/node_modules ./node_modules
+COPY --from=builder /app/package.json ./package.json
+COPY --from=builder /app/public ./public
+
+CMD npm start
+
+FROM base as dev
+ENV NODE_ENV=development
+RUN npm install
+COPY . .
+CMD npm run dev
