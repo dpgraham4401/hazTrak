@@ -15,7 +15,6 @@ const mockSites = [
 ];
 const server = setupServer(...mockUserEndpoints, ...mockSiteEndpoints);
 
-// pre-/post-test hooks
 beforeAll(() => server.listen());
 afterAll(() => server.close()); // Disable API mocking after the tests are done.
 

@@ -50,7 +50,9 @@ export function SiteSelect({
             options={siteOptions}
             noOptionsMessage={() => 'No Sites found'}
             value={value}
+            // @ts-ignore
             getOptionLabel={(option) => `${option.epaSiteId} -- ${option.name}`}
+            // @ts-ignore
             getOptionValue={(option) => option.epaSiteId}
             isSearchable
             isClearable

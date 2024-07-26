@@ -17,14 +17,14 @@ CMD ["npm", "run", "test"]
 FROM builder as dev
 WORKDIR /app
 EXPOSE 3000
-CMD ["npm", "start"]
+CMD ["npm", "dev"]
 
 # Production
 FROM nginx:1.24.0-alpine as production
 WORKDIR /app
 ENV NODE_ENV production
 # copy build from builder stage
-COPY --from=builder /app/build /usr/share/nginx/html
+COPY --from=builder /app/dist /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 EXPOSE 3000
 CMD ["nginx", "-g", "daemon off;"]

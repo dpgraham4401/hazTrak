@@ -13,6 +13,7 @@ interface HtToolTipProps extends TooltipProps {
 export function HtTooltip(props: HtToolTipProps): ReactElement {
   const overlayProps = (({ text, children, ...props }: HtToolTipProps) => props)(props);
   return (
+    // @ts-ignore
     <OverlayTrigger
       {...overlayProps}
       delay={{ show: 250, hide: 400 }}
