@@ -6,3 +6,9 @@ node_modules/
 **/.idea
 **/*.bak
 /coverage
+Dockerfile
+npm-debug.log
+.next
+!.next/static
+!.next/standalone
+.git
