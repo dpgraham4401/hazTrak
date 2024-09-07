@@ -61,7 +61,7 @@ jobs:
       - name: "Install Dependencies"
         run: |
           python -m pip install uv
-          uv pip install -r requirements_dev.txt
+          uv sync --all-extras --dev
 
       - name: "Run Tests"
         env:
